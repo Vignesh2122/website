@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+@import url("https://fonts.googleapis.com/css2? family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+@keyframes slideRightToLeft {
+  100% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slideRightToLeft {
+  animation: slideRightToLeft 15s linear infinite;
+}
+
+@keyframes slideLeftToRight {
+  100% {
+    transform: translateX(0%);
+  }
+
+  0% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slideLeftToRight {
+  animation: slideLeftToRight 17s linear infinite;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+html {
+  scroll-behavior: smooth !important;
+  scroll-padding: 6rem;
+}
+
+/* Home page background image */
+
+.home-bg-image {
+  background-image: url("../img/headervector.svg");
+}
+.block-bg-image {
+  background-image: url("../img/MLOps-bnr.png");
+  height: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  margin-bottom: 2%;
+}
+.blog-sty h4{
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+/*  */
+
+.leftbox2 p {
+  transform: rotateY(180deg);
+}
+
+.container-left:hover .leftbox1 {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.container-left:hover .leftbox2 {
+  transform: rotateY(180deg);
+  opacity: 1;
+}
+
+.rightbox2 p {
+  transform: rotateY(180deg);
+}
+
+.container-right:hover .rightbox1 {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.container-right:hover .rightbox2 {
+  transform: rotateY(180deg);
+  opacity: 1;
+}
+
+@variants responsive {
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+.active {
+  background-color: #e3e6ed;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: #e3e6ed;
+}
+
+/* form loader */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+  background:
+    var(--c) 50% 0,
+    var(--c) 50% 100%,
+    var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(.5turn)
+  }
+}
+
+/* career search input box */
+.input-search .ant-input-group-addon {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .serach-bar .ant-input-search .ant-input-affix-wrapper {
+    border-radius: 8px;
+    padding: 5px 10px;
+    border-color: #e3e6ed;
+    background-color: #e3e6ed;
+  }
+}
+
+@media (min-width: 577px) {
+  .serach-bar .ant-input-search .ant-input-affix-wrapper {
+    padding: 10px 10px;
+    border-color: #e3e6ed;
+    background-color: #e3e6ed;
+    border-radius: 8px;
+  }
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.ant-input-group>.ant-input-affix-wrapper:not(:last-child) .ant-input {
+  background-color: #e3e6ed !important;
+}
+
+.ant-input-affix-wrapper>input.ant-input {
+  background-color: #e3e6ed;
+}
+
+.ant-input-affix-wrapper-lg {
+  font-weight: 500;
+}
+
+/* career collapse */
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-expand-icon {
+  display: none;
+}
+
+.ant-collapse-borderless>.ant-collapse-item {
+  border-bottom: none;
+}
+
+.ant-collapse>.ant-collapse-item {
+  border-bottom: none;
+}
+
+@media (min-width: 577px) {
+  .country .react-tel-input .form-control {
+    border: none;
+    border-bottom: 1px solid #8d8d8d;
+    border-radius: 0px;
+    padding: 7px 0px 6px 60px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .country .react-tel-input .form-control {
+    border: none;
+    border-bottom: 1px solid #8d8d8d;
+    border-radius: 0px;
+    padding: 7px 0px 6px 60px;
+    width: 100%;
+  }
+}
+
+.react-tel-input .selected-flag:focus:before,
+.react-tel-input .selected-flag.open:before {
+  border-color: white !important;
+  box-shadow: none !important;
+}
+
+.react-tel-input .form-control {
+  border-color: grey !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .ant-back-top .ant-back-top-content {
+    background-color: #D45147;
+    margin-left: 0px;
+    transition: background-color 1.0s, color 1.0s;
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-back-top .ant-back-top-content:hover {
+    background-color: #2980b9;
+    color: black;
+    transition: background-color 1.0s, color 1.0s;
+  }
+}
+
+@media (min-width: 769px) {
+  .ant-back-top .ant-back-top-content {
+    margin-left: 80px;
+    background-color: #D45147;
+    transition: background-color 1.0s, color 1.0s;
+  }
+}
+
+@media (min-width: 769px) {
+  .ant-back-top .ant-back-top-content:hover {
+    background-color: #2980b9;
+    color: black;
+    transition: background-color 1.0s, color 1.0s;
+  }
+}
+@media (min-width: 1020px) {
+  .block-bg-image{
+    height: 400px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-140px * 20));
+  }
+}
+
+.animation {
+  animation: scroll 30s linear infinite;
+  /* Adjust the duration as needed */
+}
+
+/* slider */
+.hover-stop-and-grow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-stop-and-grow:hover {
+  transform: scale(1.4);
+  /* Increase the size on hover */
+  transition: transform 0.3s ease-in-out;
+  /* Add a smooth transition effect on hover */
+  cursor: pointer;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+.pnf-sec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hdr-sty {
+  box-shadow: 0 2px 16px 2px #afafaf2b;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "pirai-website-phase3",
+  "version": "1.1.5",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "antd": "5.15.3",
+    "autoprefixer": "10.4.18",
+    "css-loader": "6.10.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.1.3",
+    "mini-css-extract-plugin": "2.8.1",
+    "next": "13.4.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "5.0.1",
+    "react-phone-input-2": "2.15.1",
+    "react-tabs": "6.0.2",
+    "tailwindcss": "3.4.1",
+    "sharp": "0.33.2",
+    "yup": "1.4.0"
+  }
+}
